@@ -1,0 +1,29 @@
+Документация doctest к классу Matrix модуля task_a_main_home
+
+>>> from home_work.task_a_main_home import *
+
+
+Инициализация и вывод
+>>> Matrix([[1, 2, 3], [4, 5, 6]]).__str__()
+'It`s matrix\n[1, 2, 3]\n[4, 5, 6]\n'
+
+>>> Matrix([[1, 2, 3], [4, 5, 6]]).__repr__()
+'Matrix([[1, 2, 3], [4, 5, 6]])'
+
+Размер матрицы
+>>> Matrix([[1, 2, 3], [4, 5, 6]]).matrix_size()
+6
+
+Сложение матриц
+>>> Matrix([[1, 2, 3], [4, 5, 6]]) + Matrix([[1, 1, 1], [1, 1, 1]])
+Matrix([[2, 3, 4], [5, 6, 7]])
+
+>>> Matrix([[1, 2, 3], [4, 5, 6]]) + Matrix([[1, 1, 1]])
+'The matrices do not correspond to the dimensions'
+
+Умножение матриц
+>>> Matrix([[1, 2, 3], [4, 5, 6]]) * Matrix([[1, 1, 1], [2, 2, 2], [1, 1, 1]])
+Matrix([[8, 8, 8], [20, 20, 20]])
+
+>>> Matrix([[1, 2, 3], [4, 5, 6]]) * Matrix([[1, 1, 1], [2, 2, 2]])
+'The matrices do not correspond to the dimensions'
